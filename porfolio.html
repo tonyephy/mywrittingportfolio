@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Antony Wanjiru, Freelance Content Writer">
+    <title>Antony Wanjiru - Freelance Content Writer</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --text: #1f2937;
+            --bg: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 8rem 1rem 4rem;
+            background: linear-gradient(rgba(37,99,235,0.05), rgba(37,99,235,0.1));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .services {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .testimonials {
+            background: linear-gradient(rgba(37,99,235,0.05), rgba(37,99,235,0.1));
+            padding: 4rem 1rem;
+        }
+
+        .testimonial-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .contact {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: var(--text);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">AW</div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Crafting Words That<br>Drive Results</h1>
+            <p>I'm Antony Wanjiru, a strategic content writer helping brands connect with their audience through compelling storytelling and SEO-optimized content that converts.</p>
+            <a href="#contact" class="cta-button">Let's Work Together</a>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div>Years Experience</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div>Articles Written</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">98%</div>
+            <div>Client Satisfaction</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div>Regular Clients</div>
+        </div>
+    </div>
+
+    <section class="services" id="services">
+        <h2>Services I Offer</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>SEO Content Writing</h3>
+                <p>Strategic content that ranks well and drives organic traffic to your website. I combine thorough keyword research with engaging writing to create content that both search engines and readers love.</p>
+            </div>
+            <div class="service-card">
+                <h3>Blog Writing</h3>
+                <p>Engaging blog posts that establish your authority and keep your audience coming back for more. Topics range from lifestyle and health to technology and business.</p>
+            </div>
+            <div class="service-card">
+                <h3>Technical Writing</h3>
+                <p>Clear and concise technical documentation, user guides, and how-to articles that make complex topics accessible to your target audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="testimonial-content">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Antony has been instrumental in growing our blog traffic by 300% through his SEO-optimized content. His writing is engaging and delivers real results."</p>
+                <p class="testimonial-author">- Sarah Johnson, Marketing Director</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Working with Antony has been a game-changer for our content strategy. His attention to detail and ability to capture our brand voice is exceptional."</p>
+                <p class="testimonial-author">- Michael Chen, CEO</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Ready to Elevate Your Content?</h2>
+        <p>Let's discuss how I can help you achieve your content goals. Reach out at <a href="mailto:tonylvan77@gmail.com">tonylvan77@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Antony Wanjiru. Transforming ideas into impactful content.</p>
+    </footer>
+</body>
+</html>
